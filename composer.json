@@ -1,0 +1,30 @@
+{
+  "name": "juri/typo3-vehicle-platform-demo",
+  "description": "TYPO3 demo project with a custom vehicle catalog extension",
+  "type": "project",
+  "license": "MIT",
+  "require": {
+    "typo3/cms-core": "^12.4",
+    "typo3/cms-backend": "^12.4",
+    "typo3/cms-frontend": "^12.4",
+    "typo3/cms-extbase": "^12.4",
+    "typo3/cms-fluid": "^12.4",
+    "typo3/cms-install": "^12.4",
+    "typo3/cms-extensionmanager": "^12.4"
+  },
+  "extra": {
+    "typo3/cms": {
+      "web-dir": "web"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Vendor\\\\VehicleCatalog\\\\": "typo3conf/ext/vehicle_catalog/Classes/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "typo3/cms-composer-installers": true
+    }
+  }
+}
