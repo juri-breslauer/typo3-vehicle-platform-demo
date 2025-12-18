@@ -10,7 +10,8 @@
     "typo3/cms-extbase": "^14.0.1",
     "typo3/cms-fluid": "^14.0.1",
     "typo3/cms-install": "^14.0.1",
-    "typo3/cms-extensionmanager": "^14.0.1"
+    "typo3/cms-extensionmanager": "^14.0.1",
+    "juri-breslauer/vehicle-platform": "@dev"
   },
   "extra": {
     "typo3/cms": {
@@ -18,6 +19,12 @@
       "extension-dir": "packages"
     }
   },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "packages/*"
+    }
+  ],
   "config": {
     "allow-plugins": {
       "typo3/cms-composer-installers": true,

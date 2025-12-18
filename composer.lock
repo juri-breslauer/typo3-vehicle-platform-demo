@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "10f77ed02539c237e2e55d7e50a12724",
+    "content-hash": "3c7a108fe2aec62416db0215ddf29b56",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1061,6 +1061,33 @@
                 }
             ],
             "time": "2025-08-23T21:21:41+00:00"
+        },
+        {
+            "name": "juri-breslauer/vehicle-platform",
+            "version": "dev-feature/frontend-plugin",
+            "dist": {
+                "type": "path",
+                "url": "packages/vehicle_platform",
+                "reference": "093a08a6c2599432f6ad0ead9f1ab26e481995d6"
+            },
+            "require": {
+                "typo3/cms-core": "^14.0"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "vehicle_platform"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JuriBreslauer\\VehiclePlatform\\": "Classes/"
+                }
+            },
+            "description": "Vehicle platform frontend plugin for TYPO3 CMS",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "lolli42/finediff",
@@ -6217,7 +6244,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "juri-breslauer/vehicle-platform": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {},

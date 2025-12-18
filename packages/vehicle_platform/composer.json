@@ -1,0 +1,18 @@
+{
+  "name": "juri-breslauer/vehicle-platform",
+  "type": "typo3-cms-extension",
+  "description": "TYPO3 CMS Vehicle platform frontend plugin",
+  "require": {
+    "typo3/cms-core": "^14.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "JuriBreslauer\\VehiclePlatform\\": "Classes/"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "vehicle_platform"
+    }
+  }
+}

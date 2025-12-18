@@ -74,10 +74,22 @@ typo3-vehicle-platform-demo/
 
 ```bash
 cp .env.example .env
-docker compose up -d --build
-docker exec -it typo3_php bash
+docker compose -f docker/docker-compose.yml --env-file .env up -d --build
+docker compose -f docker/docker-compose.yml exec php bash
 composer install
 ```
+
+### Docker & Extension registration
+
+```bash
+docker compose -f docker/docker-compose.yml --env-file .env up -d
+docker compose -f docker/docker-compose.yml exec php bash
+
+composer require juri-breslauer/vehicle-platform:@dev
+composer dump-autoload
+
+vendor/bin/typo3 extension:activate vehicle_platform
+vendor/bin/typo3 cache:flush
 
 ---
 
