@@ -83,8 +83,8 @@ composer install
 
 ## Access
 
-- Frontend: http://localhost:8080
-- TYPO3 Backend: http://localhost:8080/typo3
+- Frontend: http://localhost:80
+- TYPO3 Backend: http://localhost:80/typo3
 
 
 ## License

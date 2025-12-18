@@ -1,24 +1,22 @@
-version: '3.8'
-
 services:
   web:
     image: nginx:alpine
     container_name: typo3_nginx
     ports:
-      - "8080:80"
+      - "80:80"
     volumes:
-      - ../web:/var/www/html
+      - ${PWD}:/var/www/html
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
     depends_on:
       - php
-
+    restart: unless-stopped
   php:
     build:
       context: .
-      dockerfile: php-fpm.Dockerfile
+      dockerfile: php/Dockerfile
     container_name: typo3_php
     volumes:
-      - ../:/var/www
+      - ${PWD}:/var/www/html
     environment:
       TYPO3_CONTEXT: Development
       DB_CONNECTION: mysql
@@ -29,6 +27,7 @@ services:
       DB_PASSWORD: ${MYSQL_PASSWORD}
     depends_on:
       - db
+    restart: unless-stopped
 
   db:
     image: mariadb:10.6
@@ -40,6 +39,7 @@ services:
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     volumes:
       - db_data:/var/lib/mysql
+    restart: unless-stopped
 
 volumes:
   db_data:

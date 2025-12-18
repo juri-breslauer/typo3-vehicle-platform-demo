@@ -1,20 +1,53 @@
+# --------------------------------------------------
+# OS / IDE
+# --------------------------------------------------
 .DS_Store
 .idea/
 .vscode/
 
+# --------------------------------------------------
+# Environment
+# --------------------------------------------------
 .env
 
-vendor/
-composer.lock
+# --------------------------------------------------
+# Composer
+# --------------------------------------------------
+/vendor/
 
-web/typo3temp/
-web/fileadmin/_processed_/
-web/uploads/
-web/var/
+# --------------------------------------------------
+# TYPO3 runtime (generated)
+# --------------------------------------------------
+var/
+var/cache/*
+var/log/*
+var/session/*
+var/lock/*
 
+!/var/.htaccess
 
-typo3conf/LocalConfiguration.php
-typo3conf/AdditionalConfiguration.php
-config/system/settings.php
+/web/typo3temp/*
+/web/uploads/*
+/web/FIRST_INSTALL
 
-docker/db_data/
+/web/fileadmin/*
+!/web/fileadmin/.htaccess
+/web/fileadmin/_processed_/
+
+/web/_assets/
+
+# --------------------------------------------------
+# TYPO3 configuration (local / generated)
+# --------------------------------------------------
+/typo3conf/LocalConfiguration.php
+/typo3conf/AdditionalConfiguration.php
+/config/system/settings.php
+
+# --------------------------------------------------
+# Logs
+# --------------------------------------------------
+*.log
+# --------------------------------------------------
+# Docker
+# --------------------------------------------------
+/docker/db_data/
