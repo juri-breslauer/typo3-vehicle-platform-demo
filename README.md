@@ -77,6 +77,7 @@ cp .env.example .env
 docker compose -f docker/docker-compose.yml --env-file .env up -d --build
 docker compose -f docker/docker-compose.yml exec php bash
 composer install
+docker compose -f docker/docker-compose.yml --env-file .env exec php touch web/FIRST_INSTALL 
 ```
 
 ### Docker & Extension registration

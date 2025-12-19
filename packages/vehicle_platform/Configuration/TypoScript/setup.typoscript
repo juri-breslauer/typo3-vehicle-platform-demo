@@ -1,0 +1,7 @@
+plugin.tx_vehicleplatform {
+  view {
+    templateRootPaths.0 = EXT:vehicle_platform/Resources/Private/Templates/
+    layoutRootPaths.0 = EXT:vehicle_platform/Resources/Private/Layouts/
+    partialRootPaths.0 = EXT:vehicle_platform/Resources/Private/Partials/
+  }
+}

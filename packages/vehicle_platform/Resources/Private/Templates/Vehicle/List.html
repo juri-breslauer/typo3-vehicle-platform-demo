@@ -1,0 +1,16 @@
+<h1>Vehicles</h1>
+
+<f:if condition="{vehicles}">
+    <ul>
+        <f:for each="{vehicles}" as="vehicle">
+            <li>
+                <strong>{vehicle.title}</strong><br>
+                {vehicle.description}
+            </li>
+        </f:for>
+    </ul>
+</f:if>
+
+<f:if condition="{vehicles -> f:count()} == 0">
+    <p>No vehicles found.</p>
+</f:if>

@@ -4,13 +4,13 @@
   "type": "project",
   "license": "MIT",
   "require": {
-    "typo3/cms-core": "^14.0.1",
-    "typo3/cms-backend": "^14.0.1",
-    "typo3/cms-frontend": "^14.0.1",
-    "typo3/cms-extbase": "^14.0.1",
-    "typo3/cms-fluid": "^14.0.1",
-    "typo3/cms-install": "^14.0.1",
-    "typo3/cms-extensionmanager": "^14.0.1",
+    "typo3/cms-core": "^13.4.22",
+    "typo3/cms-backend": "^13.4.22", 
+    "typo3/cms-frontend": "^13.4.22", 
+    "typo3/cms-extbase": "^13.4.22", 
+    "typo3/cms-fluid": "^13.4.22", 
+    "typo3/cms-install": "^13.4.22", 
+    "typo3/cms-extensionmanager": "^13.4.22",
     "juri-breslauer/vehicle-platform": "@dev"
   },
   "extra": {
