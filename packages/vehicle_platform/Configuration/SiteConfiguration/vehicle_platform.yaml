@@ -1,0 +1,6 @@
+routes:
+  -
+    routePath: '/vehicles'
+    type: static
+    controller: 'JuriBreslauer\VehiclePlatform\Controller\VehicleAppController::list'
+    defaults: { }

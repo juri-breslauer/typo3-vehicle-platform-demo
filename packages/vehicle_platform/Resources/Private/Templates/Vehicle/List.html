@@ -14,3 +14,14 @@
 <f:if condition="{vehicles -> f:count()} == 0">
     <p>No vehicles found.</p>
 </f:if>
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <h1>Vehicles</h1>
+
+    <ul>
+        <f:for each="{vehicles}" as="vehicle">
+            <li>Vehicle record #{vehicle.uid}</li>
+        </f:for>
+    </ul>
+</f:section>

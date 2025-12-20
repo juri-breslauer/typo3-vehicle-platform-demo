@@ -1,7 +1,11 @@
-plugin.tx_vehicleplatform {
+plugin.tx_vehicleplatform_vehiclelist {
   view {
     templateRootPaths.0 = EXT:vehicle_platform/Resources/Private/Templates/
-    layoutRootPaths.0 = EXT:vehicle_platform/Resources/Private/Layouts/
-    partialRootPaths.0 = EXT:vehicle_platform/Resources/Private/Partials/
   }
+}
+tt_content.list.20.vehicleplatform_vehiclelist = USER
+tt_content.list.20.vehicleplatform_vehiclelist {
+  userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+  extensionName = VehiclePlatform
+  pluginName = VehicleList
 }
